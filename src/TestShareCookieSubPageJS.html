@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>List all cookies for the current page?</title>
+</head>
+<body style="text-align:center;" onload="getCookies()">
+    <h1 style="color: green"> Get All cookies </h1>
+    <p id="Test" style="font-size: 20px; font-weight: bold;"> </p>
+    <script  type = "text/javascript">
+function getCookies() {
+    var Text = document.getElementById("Test");
+        var cookies = document.cookie.split(';');
+        for(var name in cookies) {
+              Text.innerHTML+="<br />"+"Cookies:"+name + " : " + cookies[name] + "<br />"
+              }
+    }
+    </script>
+</body>
+</html>
